@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>JavaScript and jQuery - Chapter 5: Events</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="code.js"></script>
+    </head>
+    <body>
+    pg 145<br />
+    Working with the DOM:<br />
+    Code that handles the DOMContentLoaded event<br />
+    Using a function expression as the event handler<br />
+    const showMessage = () => {<br />
+    const msg = "The DOM is ready!";<br />
+    alert(msg);<br />
+    };<br />
+    document.addEventListener("DOMContentLoaded", showMessage);<br />
+    Using an anonymous function as the event handler<br />
+    document.addEventListener("DOMContentLoaded", () => {<br />
+    const msg = "The DOM is ready!";<br />
+    alert(msg);<br />
+    });<br />
+    <br />
+    ctrl shift i or f12 to open debugger<br />
+    <br />
+    pg 171, stepping over, into buttons<br />
+        f11 into<br />
+        f10 over<br />
+        shift f11 step out<br />
+        f8 resume<br />
+        <br />
+        console.log("hello world"); //prints to console<br />
+        <br />
+        console.error("error"); //prints to console in red<br />
+        console.warn("warning"); //prints to console in yellow<br />
+        console.log("%cHello World", "color: blue; font-size: 40px;"); //prints to console in blue, with font size 40px<br />
+        console.trace(); //makes it easy to go to the line of code that called the function<br />
+        <textarea id="writethere" name="#writethere" style="width: 100%;min-height: 200px;">
+Write here
+        </textarea>
+        <input type="button" value="Click Me" id="somebutton" name="somebutton" /><br />
+<br />
+Using <a href="../ch04/future_value/index.html">future value calculator</a><br />
+Using <a href="../../solutions/ch04/future_value/index.html">future value calculator solution</a><br />
+fig 5-1 pg 163<br />
+
+    </body>
+</html>

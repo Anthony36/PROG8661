@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Miles Per Gallon Calculator</title>
+    <link rel="stylesheet" href="mpg.css">
+    <script>
+        const $ = selector => document.querySelector(selector);
+    </script>
+</head>
+<body id="thebody">
+    <main>
+        <h1>The Miles Per Gallon Calculator</h1>
+        <script>
+            "use strict";
+            
+            // get miles driven from user
+            const miles = parseInt(prompt("Enter miles driven"));
+
+            // get gallons used from user
+            const gallons = parseInt(prompt("Enter gallons of gas used"));
+
+            // calculate mpg
+            const mpg = parseFloat(miles/gallons);
+
+            // display results
+            const html = `<p><label>Miles: </label>${miles}</p>
+                <p><label>Gallons: </label>${gallons}</p>
+                <p><label>MPG: </label>${mpg.toFixed(2)}</p>`;
+            document.write(html);
+        </script>    
+        <input type="button" id="clickme" value="click me" onclick="openDialog()" />
+        <br />
+        <input type="button" id="clickme2" value="click me 2" onclick="od2()" /><br />
+        <input type="button" name="gethtml" id="gethtml" value="get html" />
+        <script>
+            function openDialog(){
+                window.open("index.html",'winname','directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=400,height=350');
+            }
+            function od2(){
+                let mywin = window.open("mywindow.html","mywindow",'directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=400,height=350');
+                mywin.document.write("here are my html results: <b>hi</b>");
+            }
+            $("#gethtml").addEventListener("click", fn1);
+            function fn1(){
+                alert($("#thebody").outerHTML);
+                let someVar = "this is all that is required\rthe value\retc\r";
+                alert(someVar);
+            }
+        </script>
+    </main>
+</body>
+</html>
